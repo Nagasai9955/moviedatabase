@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Database</title>
+  <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+
+  <div id="app">
+    <h1>Movie Database</h1>
+
+    <div id="movies">
+      <!-- Movie list will be displayed here -->
+    </div>
+
+    <button onclick="openForm()">Add Movie</button>
+
+    <div class="form-popup" id="addMovieForm">
+      <form class="form-container" onsubmit="addMovie(); return false;">
+        <h2>Add Movie</h2>
+
+        <label for="title"><b>Title:</b></label>
+        <input type="text" placeholder="Enter movie title" name="title" required>
+
+        <label for="year"><b>Year:</b></label>
+        <input type="number" placeholder="Enter release year" name="year" required>
+
+        <button type="submit" class="btn">Add</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="movie.js"></script>
+</body>
+</html>
